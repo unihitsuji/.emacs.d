@@ -1,6 +1,9 @@
 auto-save-list
+elpa
+url
 .emacs.desktop
 .emacs.desktop.lock
+network-security.data
 *~
 *#*
 .#*

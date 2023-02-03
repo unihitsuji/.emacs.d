@@ -41,8 +41,10 @@
 ;;;     M-* or M-x pop-tag-mark
 (define-key global-map (kbd "M-*") 'pop-tag-mark)
 ;;(global-set-key (kbd "M-*") 'pop-tag-mark)
+(define-key global-map (kbd "C-x g") 'magit-status)
 
 ;;; パッケージ管理ツール
+;;; emacs バージョン 24 以降で標準になった
 ;;; https://emacs-jp.github.io/packages/package の設定例
 (require 'package)
 ;; package-archives を上書き
@@ -51,13 +53,14 @@
         ;; ("melpa-stable" . "https://stable.melpa.org/packages/")
         ("org" . "https://orgmode.org/elpa/")
         ;; ("gnu" . "https://elpa.gnu.org/packages/")
+        ;; ("marmalade" . "http://marmalade-repo.org/packages/")
 	))
 
 ;;; 指定したパッケージをインストールする例
 ;;;     M-x package-install
 
 ;;; パッケージ情報を更新する
-;;; 後述の package-list-packages からインストールするときは不要
+;;;     後述の package-list-packages からインストールするときは不要
 ;;;     M-x package-refresh-contents
 
 ;;; パッケージ操作バッファを開く
@@ -95,5 +98,3 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-
-;;; (package-list-packages)
